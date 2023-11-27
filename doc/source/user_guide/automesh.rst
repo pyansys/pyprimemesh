@@ -132,22 +132,6 @@ This code prints the volume quality summary:
         Max Skew: 0.795889
         Min Skew: 0.00163176
 
-Prism controls for polyhedral mesh using the Lucid module
----------------------------------------------------------
-
-This example shows how to generate the preceding poly prism method using the Lucid module:
-
-.. code-block:: python
-
-    # Volume mesh with polyhedral elements
-    # Set prism layers parameter for boundary layer refinement
-    mesh_util.volume_mesh(
-        volume_fill_type=prime.VolumeFillType.POLY,
-        prism_layers=5,
-        prism_surface_expression="* !inlet !outlet",
-    )
-
-
 =============================
 Volume-specific mesh controls
 =============================
