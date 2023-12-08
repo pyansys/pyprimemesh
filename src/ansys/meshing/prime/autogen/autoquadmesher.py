@@ -6,7 +6,7 @@ from ansys.meshing.prime.autogen.coreobject import *
 from typing import List, Any, Union
 
 class AutoQuadMesher(CoreObject):
-    """Generate full quad mesh.
+    """Generates full quad mesh.
 
     """
 
@@ -36,7 +36,7 @@ class AutoQuadMesher(CoreObject):
         Parameters
         ----------
         part_id : int
-            Id of the Part.
+            Id of the part.
         topo_face_ids : Iterable[int]
             Ids of topofaces.
         params : DetectAndTreatFeaturesParams
@@ -75,13 +75,13 @@ class AutoQuadMesher(CoreObject):
         return AutoQuadMesherResults(model = self._model, json_data = result)
 
     def repair_topology(self, part_id : int, topo_face_ids : Iterable[int], params : RepairTopologyParams) -> AutoQuadMesherResults:
-        """ Repair topology with given parameters.
+        """ Repair topology with the given parameters.
 
 
         Parameters
         ----------
         part_id : int
-            Id of the Part.
+            Id of the part.
         topo_face_ids : Iterable[int]
             Ids of topofaces.
         params : RepairTopologyParams
@@ -126,7 +126,7 @@ class AutoQuadMesher(CoreObject):
         Parameters
         ----------
         part_id : int
-            Id of the Part.
+            Id of the part.
         topo_face_ids : Iterable[int]
             Ids of topofaces.
         params : DefeatureTopologyParams
@@ -210,13 +210,13 @@ class AutoQuadMesher(CoreObject):
         return AutoQuadMesherResults(model = self._model, json_data = result)
 
     def check_topology(self, part_id : int, topo_face_ids : Iterable[int], params : CheckTopologyParams) -> AutoQuadMesherResults:
-        """ Check topology for inconsistencies with the given parameters.
+        """Check topology with the given parameters for inconsistencies.
 
 
         Parameters
         ----------
         part_id : int
-            Id of the Part.
+            Id of the part.
         topo_face_ids : Iterable[int]
             Ids of topofaces.
         params : CheckTopologyParams
